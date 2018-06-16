@@ -1,0 +1,69 @@
+---------------------------------------------------------------------------------------------------
+Request:
+---------------------------------------------------------------------------------------------------
+
+{
+  "biometricDetails": {
+    "curp": "KUSA1234567",
+    "leftFingerPrint": "Rk1SACAyMAAA7AAdAAAAAAEAAZAAxQDFAQAAACMigE4ASGBKQFwAZGVdQJIAbgNdgLAAcFpdQKAAk11dgFwAlgZdgD0AmmtXgDEAnQ5XQJIAnQZdQI0Apl1dQCoAzBRdQGUA02tdgBgA13NQgCYA13ZXgI8A3GhdQCoA7XZdQHYA 3ZXQI0A 3NdQLAA 55QgJYBCYFQQK4BC5VQgFwBEnZKgIQBF4RXgFABGRlQgLoBI5hKQFkBMXxXgGwBS4dXgLcBYkFKgF4BbhlKQIgBcEZKQMUBcqZKQNsBckRDgHYBd2BKgGMBfAZKAAA=",
+    "rightFingerPrint": "Rk1SACAyMAAA7AAdAAAAAAEAAZAAxQDFAQAAACMigE4ASGBKQFwAZGVdQJIAbgNdgLAAcFpdQKAAk11dgFwAlgZdgD0AmmtXgDEAnQ5XQJIAnQZdQI0Apl1dQCoAzBRdQGUA02tdgBgA13NQgCYA13ZXgI8A3GhdQCoA7XZdQHYA 3ZXQI0A 3NdQLAA 55QgJYBCYFQQK4BC5VQgFwBEnZKgIQBF4RXgFABGRlQgLoBI5hKQFkBMXxXgGwBS4dXgLcBYkFKgF4BbhlKQIgBcEZKQMUBcqZKQNsBckRDgHYBd2BKgGMBfAZKAAA=",
+    "customerInformation": {
+      "consentFlag": true,
+      "firstName": "John",
+      "lastName": "Carter",
+      "motherLastName": "Trovolta",
+      "postalCode": "01210"
+    },
+    "ineDetails": {
+      "ineId": 12345667,
+      "ineRegistrationDate": 20171226,
+      "cicIndicator": "04",
+      "ineIssueYear": "2014",
+      "ineIdKey": "1234567"
+    },
+    "originationDetails": {
+      "agentId": "ab12345",
+      "sirhExpenseCode": "1234",
+      "applicationToken": "XgDEAnQ5XQJIAnQZdQI0",
+      "applicationCsi": "12345",
+      "approverId": "ab12345",
+      "ipAddress": "172.168.10.12",
+      "transactionId": "12"
+    }
+  }
+}
+
+
+---------------------------------------------------------------------------------------------------
+Response: 
+---------------------------------------------------------------------------------------------------
+
+{
+  "biometricDetails": {
+    "curp": "KUSA1234567",
+    "leftFingerPrint": "Rk1SACAyMAAA7AAdAAAAAAEAAZAAxQDFAQAAACMigE4ASGBKQFwAZGVdQJIAbgNdgLAAcFpdQKAAk11dgFwAlgZdgD0AmmtXgDEAnQ5XQJIAnQZdQI0Apl1dQCoAzBRdQGUA02tdgBgA13NQgCYA13ZXgI8A3GhdQCoA7XZdQHYA 3ZXQI0A 3NdQLAA 55QgJYBCYFQQK4BC5VQgFwBEnZKgIQBF4RXgFABGRlQgLoBI5hKQFkBMXxXgGwBS4dXgLcBYkFKgF4BbhlKQIgBcEZKQMUBcqZKQNsBckRDgHYBd2BKgGMBfAZKAAA=",
+    "rightFingerPrint": "Rk1SACAyMAAA7AAdAAAAAAEAAZAAxQDFAQAAACMigE4ASGBKQFwAZGVdQJIAbgNdgLAAcFpdQKAAk11dgFwAlgZdgD0AmmtXgDEAnQ5XQJIAnQZdQI0Apl1dQCoAzBRdQGUA02tdgBgA13NQgCYA13ZXgI8A3GhdQCoA7XZdQHYA 3ZXQI0A 3NdQLAA 55QgJYBCYFQQK4BC5VQgFwBEnZKgIQBF4RXgFABGRlQgLoBI5hKQFkBMXxXgGwBS4dXgLcBYkFKgF4BbhlKQIgBcEZKQMUBcqZKQNsBckRDgHYBd2BKgGMBfAZKAAA=",
+    "leftFingerPrintTimestamp": "2017-09-05 11:23:26:385",
+    "rightFingerPrintTimestamp": "2017-09-05 11:23:26:385",
+    "leftFingerprintAccuracy": 80,
+    "rightFingerprintAccuracy": 50,
+    "customerInformation": {
+      "firstName": "John",
+      "lastName": "Carter",
+      "motherLastName": "Trovolta"
+    },
+    "ineInformation": {
+      "ineId": 12345667,
+      "ineRegistrationDate": 20171226,
+      "cicIndicator": "04",
+      "ineIssueYear": "2014",
+      "transmissionCode": "20",
+      "ineIdKey": "1234567",
+      "transmissionDescription": "transmission successful",
+      "ineRsponseCode": "02",
+      "answerDescription": "person validated"
+    }
+  }
+}
+
+

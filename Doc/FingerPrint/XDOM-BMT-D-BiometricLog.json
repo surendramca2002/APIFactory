@@ -1,0 +1,391 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Biometric Validation Microservice",
+    "description": "API for incident and transaction details.",
+    "version": "1.0.0"
+  },
+  "host": "127.0.0.1",
+  "schemes": ["https"],
+  "basePath": "/api",
+  "produces": ["application/json"],
+  "paths": {
+  
+    "/v1/customers/biometrics/log/incident/": {
+      "post": {
+        "tags": [
+          "INEIncidentDetail"
+        ],
+        "summary": "This API will be used to provide the incident details.",
+        "description": "This API is to provide the incident details.",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [{
+            "name": "Accept",
+            "in": "header",
+            "description": "Content-Types that are acceptable for the response",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "Accept-Language",
+            "in": "header",
+            "description": "List of acceptable human languages for response",
+            "type": "string",
+            "required": false
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "The Authorization Token recieved during login",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "client_id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "Client ID generated during application registration"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "description": "Content-Types that are sent in the request",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "uuid",
+            "in": "header",
+            "description": "128 bit UUID that you generate for every request",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "sid",
+            "in": "header",
+            "description": "SessionId sent by Consumer",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "ineIncidentRequest",
+            "description": "Request body corresponding to validate customer Information",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/IneIncidentRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+          },
+          "400": {
+            "description": "<table><table><tr><td>Type</td><td>Code</td><td>Details</td></tr><tr><td>error</td><td>invalidRequest</td><td>Missing or invalid Parameters</td></tr></table>",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "401": {
+            "description": "<table><tr><td>Type</td><td>Code</td><td>Details</td></tr><tr><td>error</td><td>unAuthorized</td><td>Authorization credentials are missing or invalid</td></tr></table>",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "403": {
+            "description": "<table><tr><td>Type</td><td>Code</td><td>Details</td><td>More Info</td></tr><tr><td>error</td><td>accessNotConfigured</td><td>The request operation is not configured to access this resource</td><td>Channel/Country/Business provided in the request is not supported currently</td></tr></table>",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "404": {
+            "description": "<table><tr><td>Type</td><td>Code</td><td>Details</td><td>More Info</td></tr><tr><td>error</td><td>resourceNotFound</td><td>The requested resource was not found</td><td>Empty resource/resource not found</td></tr></table>",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "500": {
+            "description": "<table><tr><td>Type</td><td>Code</td><td>Details</td></tr><tr><td>fatal</td><td>serverUnavailable</td><td>The request failed due to an internal error/server unavailability</td></tr></table>",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+  "/v1/customers/biometrics/log/success/": {
+      "post": {
+        "tags": [
+          "INELog"
+        ],
+        "summary": "This API will be used to provide the transaction details.",
+        "description": "This API is to provide the transaction details.",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [{
+            "name": "Accept",
+            "in": "header",
+            "description": "Content-Types that are acceptable for the response",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "Accept-Language",
+            "in": "header",
+            "description": "List of acceptable human languages for response",
+            "type": "string",
+            "required": false
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "The Authorization Token recieved during login",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "client_id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": "Client ID generated during application registration"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "description": "Content-Types that are sent in the request",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "uuid",
+            "in": "header",
+            "description": "128 bit UUID that you generate for every request",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "sid",
+            "in": "header",
+            "description": "SessionId sent by Consumer",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "ineLogRequest",
+            "description": "Request body corresponding to validate customer Information",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/IneLogRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+          },
+          "400": {
+            "description": "<table><table><tr><td>Type</td><td>Code</td><td>Details</td></tr><tr><td>error</td><td>invalidRequest</td><td>Missing or invalid Parameters</td></tr></table>",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "401": {
+            "description": "<table><tr><td>Type</td><td>Code</td><td>Details</td></tr><tr><td>error</td><td>unAuthorized</td><td>Authorization credentials are missing or invalid</td></tr></table>",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "403": {
+            "description": "<table><tr><td>Type</td><td>Code</td><td>Details</td><td>More Info</td></tr><tr><td>error</td><td>accessNotConfigured</td><td>The request operation is not configured to access this resource</td><td>Channel/Country/Business provided in the request is not supported currently</td></tr></table>",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "404": {
+            "description": "<table><tr><td>Type</td><td>Code</td><td>Details</td><td>More Info</td></tr><tr><td>error</td><td>resourceNotFound</td><td>The requested resource was not found</td><td>Empty resource/resource not found</td></tr></table>",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          },
+          "500": {
+            "description": "<table><tr><td>Type</td><td>Code</td><td>Details</td></tr><tr><td>fatal</td><td>serverUnavailable</td><td>The request failed due to an internal error/server unavailability</td></tr></table>",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "IneIncidentRequest": {
+      "properties": {
+    "incident": {
+          "$ref": "#/definitions/Incident"
+        }
+      }
+    },
+    "IneLogRequest": {
+      "properties": {
+    "customer": {
+          "$ref": "#/definitions/Customer"
+        }
+      }
+    },
+  "Incident": {
+      "properties": {
+        "applicationToken": {
+          "description": "applicationToken",
+          "type": "string",
+          "example": "Test123"
+        },
+        "errorCode": {
+          "description": "Error code",
+          "type": "integer",
+          "example": "1234"
+        },
+        "errorMessage": {
+          "description": "errorMessage",
+          "type": "string",
+          "example": "Error"
+        },
+        "errorTimestamp": {
+          "description": "errorDateTime (yyyyMMDD HH:mm:ss)",
+          "type": "string",
+        "format": "datetime",
+          "example": "2017/04/01 02:23:34"
+        },
+        "transactionId": {
+          "description": "Unique ID associated with transaction.",
+          "type": "string",
+          "example": "AD9AB713ED3D59V1R0AT82Z"
+        }
+      }
+    },
+    "Customer": {
+      "properties": {
+        "firstName": {
+          "description": "INE's ID Name",
+          "type": "string",
+          "example": "John"
+        },
+        "lastName": {
+          "description": "fatherLastName",
+          "type": "string",
+          "example": "Rodes"
+        },
+        "motherLastName": {
+          "description": "mother last name ",
+          "type": "string",
+          "example": "Trovolta"
+        },
+        "biometricDetail": {
+          "$ref": "#/definitions/BiometricDetail"
+        }
+      }
+    },
+  "BiometricDetail": {
+      "properties": {
+        "curp": {
+          "description": "INE Owner CURP ",
+          "type": "string",
+          "example": "KUSA1234567"
+        },
+        "leftFingerPrint": {
+          "description": "INE's ID left index finger print",
+          "type": "string",
+          "example": "Rk1SACAyMAAA7AAdAAAAAAEAAZAAxQDFAQAAACMigE4ASGBKQFwAZGVdQJIAbgNdgLAAcFpdQKAAk11dgFwAlgZdgD0AmmtXgDEAnQ5XQJIAnQZdQI0Apl1dQCoAzBRdQGUA02tdgBgA13NQgCYA13ZXgI8A3GhdQCoA7XZdQHYA 3ZXQI0A 3NdQLAA 55QgJYBCYFQQK4BC5VQgFwBEnZKgIQBF4RXgFABGRlQgLoBI5hKQFkBMXxXgGwBS4dXgLcBYkFKgF4BbhlKQIgBcEZKQMUBcqZKQNsBckRDgHYBd2BKgGMBfAZKAAA="
+        },
+        "rightFingerPrint": {
+          "description": "INE's ID right index finger print",
+          "type": "string",
+          "example": "Rk1SACAyMAAA7AAdAAAAAAEAAZAAxQDFAQAAACMigE4ASGBKQFwAZGVdQJIAbgNdgLAAcFpdQKAAk11dgFwAlgZdgD0AmmtXgDEAnQ5XQJIAnQZdQI0Apl1dQCoAzBRdQGUA02tdgBgA13NQgCYA13ZXgI8A3GhdQCoA7XZdQHYA 3ZXQI0A 3NdQLAA 55QgJYBCYFQQK4BC5VQgFwBEnZKgIQBF4RXgFABGRlQgLoBI5hKQFkBMXxXgGwBS4dXgLcBYkFKgF4BbhlKQIgBcEZKQMUBcqZKQNsBckRDgHYBd2BKgGMBfAZKAAA="
+        },
+        "leftFingerPrintTimestamp": {
+          "description": "time at which left finger print validation completed",
+          "type": "string",
+          "format": "datetime",
+          "example": "2017-09-05 11:23:26:385"
+        },
+        "rightFingerPrintTimestamp": {
+          "description": "time at which right finger print validation completed",
+          "type": "string",
+          "format": "datetime",
+          "example": "2017-09-05 11:23:26:385"
+        },  
+        "leftFingerprintAccuracy": {
+          "description": "accuracy of the validation of left fingerprint",
+          "type": "number",
+          "format": "double",
+          "example": 80
+        },
+        "rightFingerprintAccuracy": {
+          "description": "accuracy of the validation of right fingerprint",
+          "type": "number",
+          "format": "double",
+          "example": 50
+        },
+        "voterDetails": {
+          "$ref": "#/definitions/VoterDetails"
+        }
+      }
+    },
+   "VoterDetails": {
+      "properties": {
+    "cicIndicator": {
+          "description": "indicates if one has CIC",
+          "type": "string",
+          "example": "04"
+        },
+    "idIssueDate": {
+          "description": "INE ID Issue date",
+          "type": "string",
+      "format": "date",
+          "example": "02/04/2017"
+        },
+    "idRegistrationDate": {
+          "description": "INE ID Registration date",
+          "type": "string",
+      "format": "date",
+          "example": "02/04/2017"
+        },
+    "voterId": {
+          "description": "voterId",
+          "type": "string",
+          "example": "12345678"
+        }
+      }
+    },
+    "ErrorResponse": {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Invalid - Request did not confirm to the specification and was unprocessed and rejected. Please fix the value and try again",
+          "enum": ["error", "warn", "invalid", "fatal"]
+        },
+        "code": {
+          "description": "Error code which qualifies the error",
+          "type": "string"
+        },
+        "details": {
+          "description": "Human readable explanation specific to the occurrence of the problem",
+          "type": "string"
+        },
+        "location": {
+          "description": "The name of the field that resulted in the error",
+          "type": "string"
+        },
+        "moreInfo": {
+          "description": "URI to human readable documentation of the error",
+          "type": "string"
+        }
+      },
+      "required": ["type", "code"]
+    }
+  }
+}

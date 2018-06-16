@@ -1,0 +1,119 @@
+Request:
+
+{
+	"data": {
+		"datosCifrados": "J/tJEzVeD1R6A1s8nCKsB8iRIa2gGWsssD9jxMpebUpzf9mqKHGQYrXx8j1c7Jk50iA4aV7VrxqRMLnzVrNPOzG/sooJP35Kc1B72K97P/MVzMwJx1pk2MPbAgcpOWrsF4Oj3WB/emOCGQgsEQ54UG+VC7Vacaq4XqBZI+8eMs/tQSis9RHtCVcRSickZj+n1l7vjNNeSNWJ+IkxMzhIEJxUiuiv16l6UcP0E6I4IwJZIDcT1UZPY0ObWagWF3h3K6rGPcuTLT7canfrkAzNVCQktUvxRaNYgOICYutbVlG4Xtvmrvt8fff1ofAatCCEh57Soz9lA8BjLb/qPduVJke+cHbsROV4fqXJeSKFYBnizFOwFhMpJ4Pwk6NcTwhwk2MRj/+L5VnkFlhaVvD8qokX99vzNbnXNT7ECU1VNV3hCO+etnWq8dsWzqifn4AdKdCJGQ4u4FrBvmqpXwQxKNzycTvoCaRTezf7RusuVK8RR1mNHdw44xUUlSz/OLuy07pV3TWessG24LHFYnib3GxQQqaaaUWqJFkw17Z/UIKdocBafT3X/mhF944pGWM1MJurN0DS0JYSXt41CZTYg8ibWroQxMmMd0RHV1kXB6w4NhwGU7OKMjwpHurnB+JhBrMrhwGbWAyP2UpNKwByyIqeRGqb1NHHlf7HwtCiVOvKD/qFdkVXS9/4=",
+		"minucias": {
+			"tipo": 1,
+			"ancho": null,
+			"alto": null,
+			"minucia2": "Rk1SACAyMAAAwgAAAAAAAAGgAaAAxQDFAQAAAFAbgKAAQG4AgNoAVWMAgOEAdHQAgOMAhpYAgKkArJMAgRAAuUgAgMQAzD0AgSFscA5FMAgIgBFUcAgI0BN08AQNYDAHF4AQMQAOWcAQJAAZXYAQJsAZhUAQM8AZ3MAQJEAeXsAQN4A874f4gAQRMArz4AQSsAujkAQIYAyJYAQR4A2E8AQPsA3K0AQJcBC0QAQK4BC0QAQG4BDUsAQPMBHlQAQK0BOU4AAAA=",
+			"minucia7": "Rk1SACAyMAAA/gAAAAAAAAGgAaAAxQDFAQAAAGQlgQsAXJ8AgM0AXqMAgRsAfJkAgKwAf6wAgP0AhJIAgKUApiEAgQoAtYsAgScAuZIAgG0AvI8AgKgAvD8AgPgAvIYAgIMAvZoAgRsA0YgAgPQA83YAgR8A9X8AgIMA9qYAgKYBB08AgJMBF08AgScBJCIAgSYBNRIAftgRDDAMBRxAAgMABTwcAQNgAJ64AQPEAKFYAQLcAa6oAQRAAh5UAQGQAi30AQLYAjngAQNsAmYoAQG0AnIgAQS0A4osAQOkA5XMAQT0A85YAQTYBAn8AQRcBFHUAQQEBOhoAQOkBWwwAAAA="
+		},
+		"ubicacion": {
+			"posicionSatelital": {
+				"latitud": 19.12345,
+				"longitud": -99.12345
+			},
+			"localidad": {
+				"codigoPostal": "01710",
+				"ciudad": "CDMX",
+				"estado": 9
+			}
+		},
+		"consentimiento": true
+	},
+	"signature": {
+		"signedInfo": {
+			"canonicalizationMethod": {
+				"algorithm": "http://www.w3.org/TR/2001/REC-xml-c14n-20010315"
+			},
+			"signatureMethod": {
+				"algorithm": "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+			},
+			"reference": {
+				"digestMethod": {
+					"algorithm": "http://www.w3.org/2001/04/xmlenc#sha256"
+				},
+				"digestValue": "DE1F6A8933C7A6955F2E518AA15A37E6E11605CC9765E2B062EA2D762BA65AB6",
+				"uri": "#DATA"
+			}
+		},
+		"signatureValue": "ZJS+pjk3D2EvJ6iWE4LluLUJRQZSGJmL0SZ1zW1DtxCLAFJT54lmdJrirC0DTcH/vjYU9pkrGvWDOEdDTc8BqncwC/A68wZu/VJdiOF/CWaEtDAIcgj0fF7KIaieezzKGHgkOlyLqxsSDbCbpUhUz12BF1VATdU7T2JZji8mTmGg0qJr+Ol7qdjPBLw/pe1WgleZstczw2bQjhw+FRWCmIObONhJSaoFN6ojvtYpvk4UmuLyeqlozeAQAbOsKnymIPbsNx3toTHSSjA5RR3gyWwdsKB2vCwC7T5wesYaBR/x9nqbIs6GqkI3bLPQvAQOjfzlIxYp8QtP+B3k5s5PXz7wNVLw==",
+		"keyInfo": {
+			"x509Data": {
+				"x509SerialNumber": "4m"
+			}
+		}
+	},
+	"timeStamp": {
+		"momento": "20170622130012Z",
+		"indice": "6545665423523153",
+		"numeroSerie": "58.be.0e.58.16.82.6a.70.79.2b.b0.a1.f5.a8.84.8c "
+	}
+}
+
+
+
+Response: 
+
+{
+	"response": {
+		"fechaHoraPeticion": "2017-07-12 16:47:19.947",
+		"indiceSolicitud": "6545665423523153",
+		"dataResponse": {
+			"respuestaSituacionRegistral": {
+				"tipoSituacionRegistral": "VIGENTE",
+				"tipoReporteRoboExtravio": null
+			},
+			"respuestaComparacion": {
+				"anioRegistro": true,
+				"claveElector": true,
+				"apellidoPaterno": true,
+				"anioEmision": true,
+				"numeroEmisionCredencial": true,
+				"nombre": true,
+				"curp": true,
+				"apellidoMaterno": true,
+				"ocr": true
+			},
+			"codigoRespuestaDatos": 0
+		},
+		"minutiaeResponse": {
+			"codigoRespuestaMinucia": 0,
+			"similitud2": "100.0 %",
+			"similitud7": "100.0 %"
+		},
+		"tiempoProcesamiento": 506,
+		"codigoRespuesta": 0
+	},
+	"signature": {
+		"signedInfo": {
+			"canonicalizationMethod": {
+				"algorithm": "http://www.w3.org/TR/2001/REC-xml-c14n-20010315"
+			},
+			"signatureMethod": {
+				"algorithm": "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+			},
+			"reference": {
+				"digestMethod": {
+					"algorithm": "http://www.w3.org/2001/04/xmlenc#sha256"
+				},
+				"digestValue": "7xvDnM22K4jupFHUDNFEVW7dolq/Nu6IRDFhNm+u2KE=",
+				"uri": "#DATA"
+			}
+		},
+		"signatureValue": "SFJkbhjhoASDQ/9b22SKxLBC7ENRgVHIjjnph8GqFvKz3n2TMtebLThjQQ8hNqpcat73TT2e/B0x\nMRPAsGLHmbCKJ6tAz+W7ipj/FkLLEoU4Wka3GHvtXRRTKbNVDpgNRbeeDIedupmKzGHyoF+EpkXwAyD\npQt3pv3ntEqE4FQhB6nEU3QdfBOvuBMZmG72LvqNXojGlLcd35iggggdiSpmij0QrKeTeo8onFZrFp1NG\nrgTH6UcCiYPM61ehwNZh478pm6q75U8N7vIAVwcEl+YSSwMg04i9NJ3ZSjojRS3mvDmLtiohpNHc\n2jSMU1Um1ulH2YjEhPPZHwJ+rMpnamsIURIiOxeCasQIVwV9ljeFJq7Acq6YOdkWAaPLF5W3V5vW\n8tez0t22euiRTFtPW8KWrhbgqEi2rUZ4RFUvpLN4Y2Puzv6R2IbNbcSnZMVb3fmNh1Md6nbE7N7D\n7NAsgqXdAkWDCpiYUW3HGMXYeLikcwfmuu+ugObooz1wpn3X1JEAXv+LR2YiJBBC5Ne4QJwYSHf8\nQRtPKLRexWTNdVsOaH51DUiDm5cQDh7Bp/o/txVqnw8nMs5Y38dhuyQKaj7ytax9mKDWAmodxmvW\nVUCFP7biugxw4Q5ZyWtZLqpjBDVNdCrUnWvt/8ke3n0eIDgEYiRFB09bJ1UVGeVKSiHCrt/ZK1A=",
+		"keyInfo": {
+			"x509Data": {
+				"x509SerialNumber": "SERIALNumber"
+			}
+		}
+	},
+	"timestamp": {
+		"momento": "20170712214756.161Z",
+		"indice": "2f00000000201705120000000000000000000000000097739141481428",
+		"numeroSerie": "58.be.0e.58.16.82.6a.70.79.2b.b0.a1.f5.a8.84.8c"
+	}
+}
+
